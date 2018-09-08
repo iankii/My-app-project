@@ -1,0 +1,61 @@
+.content-container {
+  position: relative;
+}
+
+.left-slide {
+  left: 0;
+} 
+
+.right-slide {
+  right: 0;
+}
+
+.left-slide, .right-slide {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+}
+
+.highligh-container, .slider-container, .slider-content, .slideshow-container, .slide-container, .mySlides, .mySlides img {
+  height: 100%;
+  width: 100%;
+}
+
+.slide-container {
+  position: absolute;
+  top: 0;
+}
+
+.slideshow-container {
+  position: relative;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Fading animation */
+.slideshow-container .fade {
+  opacity: 1;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .3} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .3} 
+  to {opacity: 1}
+}
