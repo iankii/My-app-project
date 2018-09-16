@@ -1,8 +1,7 @@
 #root {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #root .container {
-    height: -webkit-fill-available;
     background: darkslategrey;
     color: white;
     padding-right: 0;

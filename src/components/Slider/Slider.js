@@ -41,14 +41,13 @@ class Slider extends Component {
 
   componentDidMount() {
     this.showSlides(this.slideIndex);
-    setInterval(this.timeSlide.bind(this), 3000)
+    setInterval(this.timeSlide.bind(this), 5000)
   }
 
   render() {
-    console.log(this.props.highlights);
     var values = this.props.highlights.map(function(value, i){
       return (
-        <div className="slide-container">
+        <div className="slide-container" key={i}>
           <Slidemage imageDetails={value} />
         </div>
       );

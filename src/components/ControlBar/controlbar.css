@@ -1,0 +1,11 @@
+@media only screen and (min-width: 812px) {
+  .control-bar-container {
+    display: flex;
+  }
+  .control-bar-container .navbar-nav {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2px 40px;
+  }
+}

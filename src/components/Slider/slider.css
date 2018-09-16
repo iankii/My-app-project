@@ -12,7 +12,7 @@
 
 .left-slide, .right-slide {
   position: absolute;
-  top: 40%;
+  top: 48%;
   z-index: 1;
 }
 

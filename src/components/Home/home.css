@@ -1,0 +1,39 @@
+.home-cards-container {
+  padding: 15px 0 20px;
+}
+.home-cards-container .card-container {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 0;
+}
+.home-cards-container .card-container .card-content {
+  width: 75%;
+  height: 125px;
+  padding: 10px;
+}
+.home-cards-container .card-container img {
+  width: 25%;
+  height: 125px;
+  padding: 10px;
+}
+
+.home-cards-container .card-content p {
+  padding: 5px;
+  margin: 0;
+}
+.home-cards-container .card-content .card-category {
+  font-family: cursive;
+  font-size: 15px;
+  padding-bottom: 0;
+}
+.home-cards-container .card-content .card-title {
+  padding-top: 0;
+  font-size: 25px;
+  font-family: initial;
+}
+.home-cards-container .card-content .card-description {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

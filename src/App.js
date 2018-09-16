@@ -1,33 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import AboutUs from './components/AboutUs/AboutUs';
 import CreateComponent from './components/CreateComponent';
+import ControlBar from './components/ControlBar/ControlBar';
 import EditComponent from './components/EditComponent';
+import Eye from './components/Eyes/Eyes';
+import Highlight from './components/Highlights/Highlight';
+import Home from './components/Home/Home';
 import IndexComponent from './components/IndexComponent';
 import Sidebar from './components/Sidebar/Sidebar';
-import Blogs from './components/Blogs/Blogs';
-import Highlight from './components/Highlights/Highlight';
-import Eye from './components/Eyes/Eyes';
 
 import appStyle from './app.css';
-
-
-
-var highlights = [
-  {
-    name: 'high1',
-    'title': 'title of first'  
-  },
-  {
-    name: 'high2',
-    'title': 'title of second'  
-  },
-  ,
-  {
-    name: 'high1',
-    'title': 'title of third'  
-  }
-];
 
 class App extends Component {
 
@@ -58,15 +42,14 @@ class App extends Component {
         <div className="container" style={appStyle} onMouseMove={this.moveEye.bind(this)} onTouchMove={this.moveEye.bind(this)}>
           <Sidebar />
           <a className="navbar-brand application-header">An<Eye />nym<Eye />usWalker</a>
-          <div className="content-container" slider="slide-in">
-            <Highlight highlights={highlights} />
-            <span></span>
-          </div>
+          <ControlBar />
+          <Highlight />
           <Switch>
+            <Route exact path='/' component={Home} />
             <Route exact path='/create' component={CreateComponent} />
             <Route path='/edit/:id' component={EditComponent} />
-            <Route path='/blogs/:id' component={Blogs} />
             <Route path='/index' component={IndexComponent} />
+            <Route path='/aboutus' component={AboutUs} />
           </Switch>
         </div>
       </Router>
