@@ -59,3 +59,10 @@
   from {opacity: .3} 
   to {opacity: 1}
 }
+
+/* desktop and tablet specific  style rules */
+@media only screen and (min-width: 812px) {
+  .left-slide, .right-slide {
+    top: 48%;
+  }
+}

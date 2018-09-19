@@ -5,6 +5,7 @@
   height: 30px;
   width: 30px;
   background: #CCC;
+  transform: rotate(180deg);
 }
 .eye:after { /*pupil*/
   position: absolute;
