@@ -31,27 +31,48 @@
 
 .container .application-header {
     font-size:1.5rem;
-    width: 100%;
     margin: 0;
     text-align: center;
     padding: 15px;
     background: #2C2619;
+    display: flex;
+    justify-content: center;
 }
 
-.content-container {
-    /* transform: translateX(20%) */
-    width: 100%;
-    height: 220px;
-    margin:  0 0 15px 0;
-}
+@media only screen and (max-width: 812px) {
+    .sidebar-toggle {
+        position: absolute;
+        margin: 10px;
+    }
 
-.content-container[slider="slide-out"] {
-    /* transform: scaleX(1); */
-    transform: scale(1)  translateX(0%);
-    transition-duration: 0.5s;
+    .navbar-brand.application-header {
+        margin-left: 60px;
+    }
+    
+    .home-highlight-container {
+        /* transform: translateX(20%) */
+        width: 100%;
+        height: 220px;
+        margin:  0 0 15px 0;
+    }
+
+    .home-highlight-container[slider="slide-out"] {
+        /* transform: scaleX(1); */
+        transform: scale(1)  translateX(0%);
+        transition-duration: 0.5s;
+    }
+    .home-highlight-container[slider="slide-in"] {
+        transform: scale(0.85)  translateX(15%) translateY(-10%);
+        transition-duration: 0.5s;
+        width: 95%;
+    }
+
+    .cards-container {
+        display: none;
+    }
 }
-.content-container[slider="slide-in"] {
-    transform: scale(0.85)  translateX(15%) translateY(-10%);
-    transition-duration: 0.5s;
-    width: 95%;
+@media only screen and (min-width: 812px) {
+    .sidebar-toggle {
+        display: none;
+    }
 }

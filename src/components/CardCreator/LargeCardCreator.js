@@ -10,7 +10,7 @@ export const LargeCardCreator = (props) => {
         <p className="card-title">{props.properties.title}</p>
         <p className="card-description">{props.properties.description}</p>
       </div>
-      <img src={require(`../../assets/highlight-assets/${props.properties.name}.jpg`)} alt={`image-${props.properties.name}`}/>      
+      <img src={require(`../../assets/highlight-assets/${props.properties.name}.jpg`)} alt={`${props.properties.name}`}/>      
     </div>
   )
 }

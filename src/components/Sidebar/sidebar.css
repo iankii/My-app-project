@@ -12,10 +12,9 @@
 .sidebar-container {
   position: fixed;
   margin: 0;
-  background: #2C2619;
   padding: 12px;
-  height: 254px;
-  width: 20%;
+  height: 200px;
+  width: 100px;
 }
 
 .slide-in {

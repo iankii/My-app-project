@@ -9,3 +9,9 @@
     padding: 2px 40px;
   }
 }
+
+@media only screen and (max-width: 812px) {
+  .control-bar-container {
+      display: none;
+  }
+}

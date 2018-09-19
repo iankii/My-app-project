@@ -14,6 +14,13 @@ import Sidebar from './components/Sidebar/Sidebar';
 import appStyle from './app.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.toggleSidebar = this.toggleSidebar.bind(this);
+    this.state = {
+      toogleOpen: true
+    }
+  }
 
   moveEye(event) {
     var x = event.clientX;
@@ -35,14 +42,33 @@ class App extends Component {
     });
   }
 
+  
+  toggleSidebar(e) {
+    // e.preventDefault(); // Let's stop this event.
+    // e.stopPropagation();
+    console.log('hello');
+    let addSlideType = (this.state.toggleOpen) ? 'slide-out' : 'slide-in';
+    let removeClass = (this.state.toggleOpen) ? 'slide-in' : 'slide-out';
+    document.getElementsByClassName('sidebar-content')[0].classList.add(addSlideType);
+    document.getElementsByClassName('sidebar-content')[0].classList.remove(removeClass);
+    document.getElementsByClassName('home-highlight-container')[0].setAttribute('slider', addSlideType);
+    setTimeout(() => {
+      document.getElementsByClassName('sidebar-container')[0].classList.toggle('hidden', (addSlideType === 'slide-out'));
+    }, 50);
+    this.setState({
+      toggleOpen: !this.state.toggleOpen
+    })
+  }
+
   // <div className="container" style={appStyle} onMouseMove={this.moveEye.bind(this)}>
   render() {
     return (
       <Router>
         <div className="container" style={appStyle} onMouseMove={this.moveEye.bind(this)} onTouchMove={this.moveEye.bind(this)}>
-          <Sidebar />
+          <button className="sidebar-toggle button" onClick={this.toggleSidebar.bind(this)}>☰</button>
           <a className="navbar-brand application-header">An<Eye />nym<Eye />usWalker</a>
           <ControlBar />
+          <Sidebar />
           <Highlight />
           <Switch>
             <Route exact path='/' component={Home} />
