@@ -3,7 +3,7 @@
 }
 
 @media only screen and (min-width: 812px) {
-  .home-highlight-container {
+  .rightside-content-container {
     width: 100%;
     display: flex;
     padding: 10px 10px 30px 10px;
@@ -12,26 +12,26 @@
     justify-content: space-around;
   }
 
-  .home-highlight-container .slider-container {
+  .rightside-content-container .slider-container {
     width: 45%;
     height: 300px;
     position: relative;
   }
 
-  .home-highlight-container .cards-container {
+  .rightside-content-container .cards-container {
     width: 50%;
     height: 300px;
     overflow-y: auto;
   }
 
-  .home-highlight-container .card-container {
+  .rightside-content-container .card-container {
     flex-direction: row;
     display: flex;
     height: 25%;
     padding: 2px
   }
 
-  .home-highlight-container .card-container img {
+  .rightside-content-container .card-container img {
     width: 20%;
     height: 100%;
     margin: 0 5px 0 0;

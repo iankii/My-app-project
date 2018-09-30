@@ -34,7 +34,7 @@ class HomeHighlights extends React.Component {
 
   render() {
     return (
-      <div className="home-highlight-container" style={highlightStyle}>
+      <div className="rightside-content-container" style={highlightStyle}>
         <Slider highlights={highlights} />
         <div className="cards-container">
           {this.createCard()}

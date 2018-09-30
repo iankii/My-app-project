@@ -31,7 +31,9 @@ class Slider extends Component {
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
-    slides[this.slideIndex - 1].style.display = "block";
+    if (!!slides.length) {
+      slides[this.slideIndex - 1].style.display = "block";
+    }
   }
 
   timeSlide() {
@@ -41,7 +43,7 @@ class Slider extends Component {
 
   componentDidMount() {
     this.showSlides(this.slideIndex);
-    setInterval(this.timeSlide.bind(this), 5000)
+    setInterval(this.timeSlide.bind(this), 2000)
   }
 
   render() {
