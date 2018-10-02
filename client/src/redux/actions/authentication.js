@@ -4,7 +4,7 @@ import { GET_ERRORS, SET_CURRENT_USER } from "./types";
 import setAuthToken from '../../setAuthToken'
 
 export const registerUser = (user, history) => dispatch => {
-  axios.post('http://localhost:5000/api/users/register', user).then(res => {
+  axios.post('/api/users/register', user).then(res => {
     history.push('/login')
   }).catch(err => {
     console.error('error:', err);
@@ -16,7 +16,7 @@ export const registerUser = (user, history) => dispatch => {
 }
 
 export const loginUser = (user) => dispatch => {
-  axios.post('http://localhost:5000/api/users/login', user).then(res => {
+  axios.post('/api/users/login', user).then(res => {
     console.log(res.data)
     const { token } = res.data;
     localStorage.setItem('jwtToken', token);

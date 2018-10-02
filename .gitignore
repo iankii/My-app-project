@@ -3,3 +3,9 @@
 /package-lock.json
 **/package-lock.json
 **/build/**
+.DS_Store
+node_modules/
+.env
+*.orig
+.idea/
+.vscode/
